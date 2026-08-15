@@ -286,7 +286,7 @@ function initMobileMenu() {
     }));
 
     window.addEventListener('resize', () => {
-      if (window.innerWidth > 1100) {
+      if (window.innerWidth > 1180) {
         navMenu.classList.remove('is-open');
         toggle.setAttribute('aria-expanded', 'false');
         toggle.querySelector('i').className = 'fas fa-bars';
