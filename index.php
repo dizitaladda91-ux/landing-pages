@@ -1,5 +1,5 @@
 <?php
-// Main PHP Landing Page for LegalAegis Trademark Consultancy
+// Main PHP Landing Page for Edwin Corporate Law Firm Trademark Consultancy
 require_once __DIR__ . '/includes/data.php';
 require_once __DIR__ . '/includes/header.php';
 ?>
@@ -119,7 +119,7 @@ require_once __DIR__ . '/includes/header.php';
     <div class="trust-container">
       <div class="stat-item">
         <h3><?php echo $siteConfig['totalFiled']; ?></h3>
-        <p>Trademarks Registered</p>
+        <p>Brands & Logos Applied</p>
       </div>
       <div class="stat-item">
         <h3><?php echo $siteConfig['avgRating']; ?></h3>
@@ -130,8 +130,40 @@ require_once __DIR__ . '/includes/header.php';
         <p>Application Approval Rate</p>
       </div>
       <div class="stat-item">
-        <h3>150+</h3>
-        <p>In-House IP Attorneys & CAs</p>
+        <h3>15+ Years</h3>
+        <p>IP Legal Expertise</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Founder Profile Section -->
+  <section class="section section-alt" id="founder">
+    <div class="section-header">
+      <span class="section-subtitle">Leadership & Legal Practice</span>
+      <h2 class="section-title">Meet Our Founder & Principal Advocate</h2>
+      <p class="section-desc">Guided by dedicated legal counsel with proven expertise in Brand & IP Law.</p>
+    </div>
+
+    <div class="founder-box">
+      <div class="founder-card">
+        <div class="founder-avatar">
+          <div class="founder-avatar-icon">
+            <i class="fas fa-user-tie"></i>
+          </div>
+          <span class="founder-badge"><?php echo htmlspecialchars($founderData['experience']); ?></span>
+        </div>
+        
+        <div class="founder-content">
+          <h3><?php echo htmlspecialchars($founderData['name']); ?></h3>
+          <div class="founder-title">
+            <i class="fas fa-gavel"></i> <?php echo htmlspecialchars($founderData['title']); ?> | <?php echo htmlspecialchars($founderData['firm']); ?>
+          </div>
+          <p><?php echo htmlspecialchars($founderData['bio']); ?></p>
+          <div class="founder-quote">
+            <i class="fas fa-quote-left" style="color: var(--secondary); margin-right: 8px;"></i>
+            "<?php echo htmlspecialchars($founderData['quote']); ?>"
+          </div>
+        </div>
       </div>
     </div>
   </section>

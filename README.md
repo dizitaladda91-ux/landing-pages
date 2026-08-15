@@ -1,6 +1,6 @@
-# LegalAegis™ - Trademark Registration Consultancy Web App (PHP Version)
+# Edwin Corporate Law Firm - Trademark Registration Consultancy Web App (PHP Version)
 
-A complete, production-ready, conversion-optimized Trademark Registration landing page & lead management web application built entirely using **PHP, HTML5, Vanilla CSS, and JavaScript**.
+A complete, production-ready, conversion-optimized Trademark Registration landing page & lead management web application for **Edwin Corporate Law Firm**, built entirely using **PHP, HTML5, Vanilla CSS, and JavaScript**.
 
 ## 📁 Directory Structure
 

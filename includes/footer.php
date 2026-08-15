@@ -7,11 +7,11 @@ if (!isset($siteConfig)) {
   <footer>
     <div class="footer-container">
       <div class="footer-brand">
-        <h3><i class="fas fa-shield-alt"></i> LegalAegis™</h3>
+        <h3><i class="fas fa-balance-scale"></i> Edwin Corporate Law Firm</h3>
         <p>
-          India's leading online legal technology and intellectual property consultancy portal. We specialize in Trademark Registration, Copyrights, Patent Searches, and Corporate Compliance.
+          India's trusted corporate law firm and intellectual property practice. We specialize in Trademark Registration, Brand Protection, IP Litigation, and Corporate Compliance.
         </p>
-        <p><i class="fas fa-map-marker-alt"></i> Corporate HQ: Sector 62, Cyber City, Gurugram / New Delhi, India</p>
+        <p><i class="fas fa-map-marker-alt"></i> Corporate HQ: Barakhamba Road, Connaught Place, New Delhi, India</p>
       </div>
 
       <div class="footer-column">
@@ -41,14 +41,14 @@ if (!isset($siteConfig)) {
         <p><strong>Hotline:</strong> <?php echo htmlspecialchars($siteConfig['phone']); ?></p>
         <p><strong>Email:</strong> <?php echo htmlspecialchars($siteConfig['email']); ?></p>
         <p style="margin-top: 10px; font-size: 0.8rem;">
-          <?php echo htmlspecialchars($siteConfig['isoCert']); ?> | Recognized by StartupIndia
+          <?php echo htmlspecialchars($siteConfig['isoCert']); ?> | Recognized Advocates
         </p>
       </div>
     </div>
 
     <div class="footer-bottom">
-      <div>© <?php echo date('Y'); ?> LegalAegis Consultancy Services. All Rights Reserved.</div>
-      <div>Disclaimer: LegalAegis is an independent corporate advisory portal and is not directly affiliated with the Government IP India portal.</div>
+      <div>© <?php echo date('Y'); ?> Edwin Corporate Law Firm. All Rights Reserved.</div>
+      <div>Disclaimer: Edwin Corporate Law Firm is an independent legal practice portal and is not directly affiliated with the Government IP India portal.</div>
     </div>
   </footer>
 

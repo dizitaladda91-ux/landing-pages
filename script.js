@@ -1,4 +1,4 @@
-// Interactive Frontend Logic for LegalAegis PHP Trademark Consultancy Platform
+// Interactive Frontend Logic for Edwin Corporate Law Firm Trademark Consultancy Platform
 
 document.addEventListener('DOMContentLoaded', () => {
   initTrademarkSearch();
@@ -64,7 +64,7 @@ function initTrademarkSearch() {
                 <strong>${data.title}</strong>
                 <p style="font-size: 0.85rem; margin-top: 2px;">${data.message}</p>
                 <button onclick="openLeadModal('${data.brand}', '${data.class}')" style="margin-top: 8px; padding: 6px 14px; background: #065f46; color: white; border-radius: 4px; font-weight: 700; font-size: 0.8rem;">
-                  File Application Now for ₹1,499 &rarr;
+                  File Application Now for ₹3,999 &rarr;
                 </button>
               </div>
             </div>

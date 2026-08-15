@@ -2,13 +2,13 @@
 // Centralized PHP Configuration and Master Data for Trademark Platform
 
 $siteConfig = [
-    'appName' => 'LegalAegis™',
+    'appName' => 'Edwin Corporate Law Firm',
     'tagline' => 'Protect Your Brand & Logo Online in India',
-    'phone' => '+91 80690 29400',
-    'phoneRaw' => '8069029400',
-    'email' => 'info@legalaegis.in',
-    'isoCert' => 'ISO 9001:2015 Certified IP Consultancy',
-    'totalFiled' => '50,000+',
+    'phone' => '+91 98100 29400',
+    'phoneRaw' => '9810029400',
+    'email' => 'contact@edwincorporatelaw.com',
+    'isoCert' => 'Govt. Registered IP Attorneys & Advocates',
+    'totalFiled' => '5,000+',
     'avgRating' => '4.9 / 5',
     'approvalRate' => '99.4%'
 ];
@@ -36,12 +36,22 @@ $tmClassesData = [
     ['class' => 'Class 45', 'title' => 'Legal & Security', 'desc' => 'Legal services, security consultancy, personal & social services.']
 ];
 
+// Founder Profile Data
+$founderData = [
+    'name' => 'Adv. Ajay Verma',
+    'title' => 'Founder & Principal IP Advocate',
+    'firm' => 'Edwin Corporate Law Firm',
+    'experience' => '15+ Years Legal Practice',
+    'bio' => 'Adv. Ajay Verma is a seasoned Intellectual Property Advocate specializing in Brand Protection, Trademark Litigation, and Corporate Advisory. Under his guidance, Edwin Corporate Law Firm has successfully applied for over 5,000+ brands and logos with the Controller General of Patents, Designs and Trade Marks (CGPDTM).',
+    'quote' => 'Protecting your brand visual identity early is the single most critical asset safeguard for any growing company.'
+];
+
 // Pricing Packages Data
 $pricingPackages = [
     [
         'id' => 'basic',
         'name' => 'Basic TM Filing',
-        'price' => '1,499',
+        'price' => '3,999',
         'popular' => false,
         'features' => [
             'Comprehensive TM Search Report',
@@ -54,7 +64,7 @@ $pricingPackages = [
     [
         'id' => 'popular',
         'name' => 'Complete Protection',
-        'price' => '2,999',
+        'price' => '6,999',
         'popular' => true,
         'features' => [
             'Everything in Basic Plan',
@@ -68,7 +78,7 @@ $pricingPackages = [
     [
         'id' => 'shield',
         'name' => 'TM Defense Shield',
-        'price' => '4,999',
+        'price' => '11,999',
         'popular' => false,
         'features' => [
             'Everything in Complete Plan',

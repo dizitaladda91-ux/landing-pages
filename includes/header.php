@@ -8,9 +8,9 @@ if (!isset($siteConfig)) {
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Trademark® Registration Online in India | Protect Brand & Logo - LegalAegis</title>
-  <meta name="description" content="Register your Trademark & Protect your Logo/Brand Name online in India with ISO certified IP Attorneys. Free Trademark Search, Same day filing & TM Receipt.">
-  <meta name="keywords" content="Trademark Registration, TM Filing India, Logo Protection, Online Legal Services, Trademark Search">
+  <title>Trademark® Registration Online in India | Protect Brand & Logo - Edwin Corporate Law Firm</title>
+  <meta name="description" content="Register your Trademark & Protect your Logo/Brand Name online in India with Edwin Corporate Law Firm. Free Trademark Search, Same day filing & TM Receipt.">
+  <meta name="keywords" content="Trademark Registration, TM Filing India, Logo Protection, Online Legal Services, Trademark Search, Edwin Corporate Law">
   
   <!-- Google Fonts & FontAwesome -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -51,12 +51,13 @@ if (!isset($siteConfig)) {
   <nav class="navbar">
     <div class="nav-container">
       <a href="index.php" class="logo">
-        <div class="logo-icon"><img src="Log-transparent.png" width="42" height="42" alt="LegalAegis scales of justice logo"></div>
-        <div>LegalAegis<span>®</span></div>
+        <div class="logo-icon"><img src="Log-transparent.png" width="42" height="42" alt="Edwin Corporate Law Firm logo"></div>
+        <div>Edwin Corporate Law<span>®</span></div>
       </a>
       
       <ul class="nav-menu" id="primary-navigation">
         <li><a href="#search" class="nav-link">TM Search</a></li>
+        <li><a href="#founder" class="nav-link">Founder</a></li>
         <li><a href="#benefits" class="nav-link">Benefits</a></li>
         <li><a href="#classes" class="nav-link">TM Classes</a></li>
         <li><a href="#process" class="nav-link">Process</a></li>
