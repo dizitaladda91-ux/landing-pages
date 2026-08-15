@@ -599,21 +599,21 @@ button {
 
 /* Client Brand Logos Section */
 .client-logos-section {
-  padding: 45px 0 50px;
-  background: #ffffff;
+  padding: 50px 0 60px;
+  background: var(--bg-alt);
   border-bottom: 1px solid var(--border-light);
 }
 
 .client-logos-header {
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 35px;
   padding: 0 20px;
 }
 
 .client-logos-header span {
   color: var(--secondary);
   font-weight: 800;
-  font-size: 0.8rem;
+  font-size: 0.82rem;
   text-transform: uppercase;
   letter-spacing: 1px;
   display: block;
@@ -622,7 +622,7 @@ button {
 
 .client-logos-header h3 {
   font-family: var(--font-heading);
-  font-size: 1.6rem;
+  font-size: 1.7rem;
   color: var(--primary-dark);
   font-weight: 800;
 }
@@ -633,38 +633,51 @@ button {
   padding: 0 20px;
 }
 
-.logo-banner-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+.client-logos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+  gap: 18px;
   align-items: center;
 }
 
-.logo-strip-card {
-  background: var(--bg-alt);
+.client-logo-card {
+  background: white;
   border: 1.5px solid var(--border-light);
   border-radius: var(--radius-md);
-  padding: 20px 24px;
-  width: 100%;
+  padding: 16px 14px;
+  height: 115px;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  box-shadow: var(--shadow-sm);
-  transition: all 0.3s ease;
+  gap: 10px;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+  transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-.logo-strip-card:hover {
-  box-shadow: var(--shadow-md);
-  border-color: #cbd5e1;
-  transform: translateY(-2px);
-  background: white;
+.client-logo-card:hover {
+  border-color: var(--primary-light);
+  box-shadow: 0 8px 22px rgba(30, 58, 138, 0.12);
+  transform: translateY(-4px);
 }
 
-.logo-strip-card img {
+.client-logo-card img {
   max-width: 100%;
+  max-height: 55px;
+  width: auto;
   height: auto;
-  max-height: 85px;
   object-fit: contain;
+}
+
+.client-logo-card span {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--text-main);
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
 }
 
 /* Founder Profile Styling */

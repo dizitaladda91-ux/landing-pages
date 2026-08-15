@@ -48,11 +48,19 @@ $founderData = [
 
 // Client Brand Logos Data
 $clientLogos = [
-    'images/image1.png',
-    'images/image2.png',
-    'images/image4.png',
-    'images/image6.png',
-    'images/image7.png'
+    ['name' => 'Science Mania', 'img' => 'images/logos/science_mania.png'],
+    ['name' => '121 Vibes', 'img' => 'images/logos/vibes_121.png'],
+    ['name' => 'Orzee Telecommunication', 'img' => 'images/logos/orzee.png'],
+    ['name' => 'Dore by Dishi', 'img' => 'images/logos/dore_by_dishi.png'],
+    ['name' => 'Nano Bytes', 'img' => 'images/logos/nano_bytes.png'],
+    ['name' => 'East Coast Customs', 'img' => 'images/logos/east_coast.png'],
+    ['name' => 'Titanflux', 'img' => 'images/logos/titanflux.png'],
+    ['name' => 'Asteri', 'img' => 'images/logos/asteri.png'],
+    ['name' => 'Vedic Air', 'img' => 'images/logos/vedic_air.png'],
+    ['name' => 'The Cakes Bar', 'img' => 'images/logos/cakes_bar.png'],
+    ['name' => 'Sillima', 'img' => 'images/logos/sillima.png'],
+    ['name' => 'Cream Ocean', 'img' => 'images/logos/cream_ocean.png'],
+    ['name' => 'Firstglee', 'img' => 'images/logos/firstglee.png']
 ];
 
 // Pricing Packages Data

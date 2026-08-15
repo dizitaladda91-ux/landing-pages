@@ -144,10 +144,11 @@ require_once __DIR__ . '/includes/header.php';
     </div>
 
     <div class="client-logos-container">
-      <div class="logo-banner-grid">
-        <?php foreach ($clientLogos as $logoImg): ?>
-          <div class="logo-strip-card">
-            <img src="<?php echo htmlspecialchars($logoImg); ?>" alt="Client Brand Logo Showcase" loading="lazy">
+      <div class="client-logos-grid">
+        <?php foreach ($clientLogos as $logo): ?>
+          <div class="client-logo-card">
+            <img src="<?php echo htmlspecialchars($logo['img']); ?>" alt="<?php echo htmlspecialchars($logo['name']); ?>" loading="lazy">
+            <span><?php echo htmlspecialchars($logo['name']); ?></span>
           </div>
         <?php endforeach; ?>
       </div>
