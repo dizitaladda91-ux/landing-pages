@@ -597,6 +597,76 @@ button {
   color: var(--text-muted);
 }
 
+/* Client Brand Logos Section */
+.client-logos-section {
+  padding: 45px 0 50px;
+  background: #ffffff;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.client-logos-header {
+  text-align: center;
+  margin-bottom: 30px;
+  padding: 0 20px;
+}
+
+.client-logos-header span {
+  color: var(--secondary);
+  font-weight: 800;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.client-logos-header h3 {
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  color: var(--primary-dark);
+  font-weight: 800;
+}
+
+.client-logos-container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.logo-banner-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.logo-strip-card {
+  background: var(--bg-alt);
+  border: 1.5px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 20px 24px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s ease;
+}
+
+.logo-strip-card:hover {
+  box-shadow: var(--shadow-md);
+  border-color: #cbd5e1;
+  transform: translateY(-2px);
+  background: white;
+}
+
+.logo-strip-card img {
+  max-width: 100%;
+  height: auto;
+  max-height: 85px;
+  object-fit: contain;
+}
+
 /* Founder Profile Styling */
 .founder-box {
   max-width: 1040px;

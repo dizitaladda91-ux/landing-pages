@@ -42,15 +42,24 @@ $founderData = [
     'title' => 'Founder & Principal IP Advocate',
     'firm' => 'Edwin Corporate Law Firm',
     'experience' => '15+ Years Legal Practice',
-    'bio' => 'Adv. Ajay Verma is a seasoned Intellectual Property Advocate specializing in Brand Protection, Trademark Litigation, and Corporate Advisory. Under his guidance, Edwin Corporate Law Firm has successfully applied for over 5,000+ brands and logos with the Controller General of Patents, Designs and Trade Marks (CGPDTM).',
+    'bio' => 'With over a decade of experience, Adv. Ajay Verma, Founder of Edwin Corporate Law Firm, is the driving force behind the firm’s vision and growth since its inception. Recognized for his pragmatic approach to IP advisory, trademark portfolio management, and strategic patent enforcement, he delivers precise legal solutions to safeguard the intellectual capital of emerging startups and established corporations.',
     'quote' => 'Protecting your brand visual identity early is the single most critical asset safeguard for any growing company.'
+];
+
+// Client Brand Logos Data
+$clientLogos = [
+    'images/image1.png',
+    'images/image2.png',
+    'images/image4.png',
+    'images/image6.png',
+    'images/image7.png'
 ];
 
 // Pricing Packages Data
 $pricingPackages = [
     [
         'id' => 'basic',
-        'name' => 'Basic TM Filing',
+        'name' => 'Basic',
         'price' => '3,999',
         'popular' => false,
         'features' => [
@@ -63,7 +72,7 @@ $pricingPackages = [
     ],
     [
         'id' => 'popular',
-        'name' => 'Complete Protection',
+        'name' => 'Premium',
         'price' => '6,999',
         'popular' => true,
         'features' => [
@@ -77,11 +86,11 @@ $pricingPackages = [
     ],
     [
         'id' => 'shield',
-        'name' => 'TM Defense Shield',
+        'name' => 'Gold',
         'price' => '11,999',
         'popular' => false,
         'features' => [
-            'Everything in Complete Plan',
+            'Everything in Premium Plan',
             'Examination Report Response (Objection Reply)',
             '1-Year Trademark Watch & Infringement Monitoring',
             'Dedicated Relationship Manager',

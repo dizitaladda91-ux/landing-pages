@@ -136,6 +136,24 @@ require_once __DIR__ . '/includes/header.php';
     </div>
   </section>
 
+  <!-- Client Brand Logos Section -->
+  <section class="client-logos-section" id="clients">
+    <div class="client-logos-header">
+      <span>Trusted Brand Protection</span>
+      <h3>Trusted by 5,000+ Brands & Logos Across India</h3>
+    </div>
+
+    <div class="client-logos-container">
+      <div class="logo-banner-grid">
+        <?php foreach ($clientLogos as $logoImg): ?>
+          <div class="logo-strip-card">
+            <img src="<?php echo htmlspecialchars($logoImg); ?>" alt="Client Brand Logo Showcase" loading="lazy">
+          </div>
+        <?php endforeach; ?>
+      </div>
+    </div>
+  </section>
+
   <!-- Founder Profile Section -->
   <section class="section section-alt" id="founder">
     <div class="section-header">
