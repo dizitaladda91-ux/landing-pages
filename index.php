@@ -136,21 +136,39 @@ require_once __DIR__ . '/includes/header.php';
     </div>
   </section>
 
-  <!-- Client Brand Logos Section -->
-  <section class="client-logos-section" id="clients">
-    <div class="client-logos-header">
-      <span>Trusted Brand Protection</span>
+  <!-- Client Video Proof Showcase Section -->
+  <section class="client-video-section" id="clients">
+    <div class="client-video-header">
+      <span>Verified Application Proof</span>
       <h3>Trusted by 5,000+ Brands & Logos Across India</h3>
+      <p class="section-desc" style="margin-top: 8px;">Watch real client brand applications and trademark registration proofs filed directly with the IP Registry.</p>
     </div>
 
-    <div class="client-logos-container">
-      <div class="client-logos-grid">
-        <?php foreach ($clientLogos as $logo): ?>
-          <div class="client-logo-card">
-            <img src="<?php echo htmlspecialchars($logo['img']); ?>" alt="<?php echo htmlspecialchars($logo['name']); ?>" loading="lazy">
-            <span><?php echo htmlspecialchars($logo['name']); ?></span>
+    <div class="client-video-container">
+      <div class="video-wrapper-card">
+        <div class="video-badge">
+          <i class="fas fa-check-circle"></i> 5,000+ Verified Brand Application Record
+        </div>
+        <div class="video-frame">
+          <video controls autoplay muted loop playsinline preload="metadata">
+            <source src="video.png.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="video-footer-info">
+          <div class="v-info-item">
+            <i class="fas fa-shield-alt"></i>
+            <span>Official Government IP India Filings</span>
           </div>
-        <?php endforeach; ?>
+          <div class="v-info-item">
+            <i class="fas fa-certificate"></i>
+            <span>End-to-End Legal Representation</span>
+          </div>
+          <div class="v-info-item">
+            <i class="fas fa-user-check"></i>
+            <span>Adv. Ajay Verma & Team Advisory</span>
+          </div>
+        </div>
       </div>
     </div>
   </section>
