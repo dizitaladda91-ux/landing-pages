@@ -41,6 +41,7 @@ if (!isset($siteConfig)) {
       <div class="footer-column">
         <h4>Contact & Legal</h4>
         <p><strong>Hotline:</strong> <?php echo htmlspecialchars($siteConfig['phone']); ?></p>
+        <p><strong>Hotline:</strong> <?php echo htmlspecialchars($siteConfig['phone2']); ?></p>
         <p><strong>Email:</strong> <?php echo htmlspecialchars($siteConfig['email']); ?></p>
         <p style="margin-top: 10px; font-size: 0.8rem;">
           <?php echo htmlspecialchars($siteConfig['isoCert']); ?> | Recognized Advocates

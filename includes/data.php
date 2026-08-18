@@ -4,9 +4,10 @@
 $siteConfig = [
     'appName' => 'Edwin Corporate Law Firm',
     'tagline' => 'Protect Your Brand & Logo Online in India',
-    'phone' => '+91 98100 29400',
-    'phoneRaw' => '9810029400',
-    'email' => 'contact@edwincorporatelaw.com',
+    'phone' => '+91 9911169979',
+    'phone2' => '011 47350808',
+    'phoneRaw' => '9911169979',
+    'email' => 'lawfirmedwincoe@gmail.com',
     'address' => 'A-5, Ground Floor, Pamposh Enclave, Near Nehru Place Flyover, GK-1, South Delhi, New Delhi - 110048, India',
     'isoCert' => 'Govt. Registered IP Attorneys & Advocates',
     'totalFiled' => '5,000+',
@@ -76,7 +77,8 @@ $pricingPackages = [
             'Class Selection Assistance',
             'TM-48 Attorney Authorization Draft',
             'Online TM Application Filing',
-            'Official Govt TM Receipt'
+            'Official Govt TM Receipt',
+            'Till Registration Watch & Monitor'
         ]
     ],
     [
@@ -90,7 +92,10 @@ $pricingPackages = [
             'User Affidavit Drafting (Prior Use)',
             'MSME Registration Guidance (50% Fee Saver)',
             'Real-time Application Status Updates',
-            'TM Certificate Dispatch Assistance'
+            'TM Certificate Dispatch Assistance',
+            'Examination Report Response (Objection Reply)',
+            'Examination Report Response (Objection Reply) and Formalities Check Fail Reply',
+            'Trademark Watch & Infringement Monitoring till date of regsitration'
         ]
     ],
     [
@@ -103,7 +108,9 @@ $pricingPackages = [
             'Examination Report Response (Objection Reply)',
             '1-Year Trademark Watch & Infringement Monitoring',
             'Dedicated Relationship Manager',
-            'Legal Cease & Desist Notice Draft'
+            'Legal Cease & Desist Notice Draft',
+            'Attend ready for show cause hearing',
+            'Trademark Watch & Infringement Monitoring till date of regsitration'
         ]
     ]
 ];

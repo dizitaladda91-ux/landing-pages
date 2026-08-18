@@ -140,6 +140,20 @@ button {
   color: var(--primary);
   white-space: nowrap;
   flex-shrink: 0;
+  text-decoration: none;
+}
+
+.nav-brand-logo-img {
+  height: 52px;
+  width: auto;
+  max-width: 260px;
+  object-fit: contain;
+  display: block;
+  transition: transform 0.2s ease;
+}
+
+.nav-brand-logo-img:hover {
+  transform: scale(1.02);
 }
 
 .logo-icon {

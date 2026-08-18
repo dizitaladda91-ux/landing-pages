@@ -50,9 +50,8 @@ if (!isset($siteConfig)) {
   <!-- Navbar -->
   <nav class="navbar">
     <div class="nav-container">
-      <a href="index.php" class="logo">
-        <div class="logo-icon"><img src="images/logo_icon.png" width="42" height="42" alt="Edwin Corporate Law Firm logo"></div>
-        <div>Edwin Corporate Law<span>®</span></div>
+      <a href="index.php" class="logo" title="Edwin Corporate Law Firm">
+        <img src="images/logo_full.png" alt="Edwin Corporate Law Firm Logo" class="nav-brand-logo-img">
       </a>
       
       <ul class="nav-menu" id="primary-navigation">

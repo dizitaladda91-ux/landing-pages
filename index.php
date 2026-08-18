@@ -101,6 +101,73 @@ require_once __DIR__ . '/includes/header.php';
               <input type="text" name="brand_name" class="form-control" placeholder="Your Proposed Brand Name" required>
             </div>
 
+            <div class="form-group">
+              <label class="form-label">Select Services <span style="color:var(--danger)">*</span></label>
+
+              <div class="custom-select" id="serviceDropdownPHP">
+                <div class="select-box" id="selectBoxPHP" tabindex="0">
+                  <span id="selectedTextPHP">Select Services</span>
+                  <span class="arrow"></span>
+                </div>
+                <div class="options-list" id="optionsListPHP">
+                  <div class="option-item placeholder" data-value="">Select Services</div>
+                  <div class="option-item" data-value="ngo_registration">Ngo Registration</div>
+                  <div class="option-item" data-value="company_registration">Company Registration</div>
+                  <div class="option-item" data-value="trademark_registration">Trademark Registration</div>
+                  <div class="option-item" data-value="copyright_registration">Copyright Registration</div>
+                  <div class="option-item" data-value="design_patent_registration">Design Patent Registration</div>
+                  <div class="option-item" data-value="registration_services">Registration Services</div>
+                  <div class="option-item" data-value="80g_12a_registration">80g/12a Registration</div>
+                  <div class="option-item" data-value="firm_registration">Firm Registration</div>
+                  <div class="option-item" data-value="darpan_registration">Darpan Registration</div>
+                  <div class="option-item" data-value="taxation_services">Taxation Services</div>
+                </div>
+              </div>
+
+              <input type="hidden" name="service" id="serviceInputPHP" required>
+            </div>
+
+            <script>
+            (function () {
+              const dropdown = document.getElementById('serviceDropdownPHP');
+              const selectBox = document.getElementById('selectBoxPHP');
+              const selectedText = document.getElementById('selectedTextPHP');
+              const serviceInput = document.getElementById('serviceInputPHP');
+              if (!dropdown || !selectBox) return;
+              const options = dropdown.querySelectorAll('.option-item:not(.placeholder)');
+
+              selectBox.addEventListener('click', () => {
+                dropdown.classList.toggle('open');
+              });
+
+              selectBox.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  e.preventDefault();
+                  dropdown.classList.toggle('open');
+                }
+              });
+
+              options.forEach(option => {
+                option.addEventListener('click', () => {
+                  selectedText.textContent = option.textContent;
+                  selectBox.classList.add('has-value');
+                  serviceInput.value = option.getAttribute('data-value');
+
+                  options.forEach(o => o.classList.remove('selected'));
+                  option.classList.add('selected');
+
+                  dropdown.classList.remove('open');
+                });
+              });
+
+              document.addEventListener('click', (e) => {
+                if (!dropdown.contains(e.target)) {
+                  dropdown.classList.remove('open');
+                }
+              });
+            })();
+            </script>
+
             <button type="submit" class="submit-btn">
               <i class="fas fa-shield-alt"></i> Apply For Trademark Protection
             </button>
