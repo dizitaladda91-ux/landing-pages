@@ -7,6 +7,7 @@ $siteConfig = [
     'phone' => '+91 98100 29400',
     'phoneRaw' => '9810029400',
     'email' => 'contact@edwincorporatelaw.com',
+    'address' => 'A-5, Ground Floor, Pamposh Enclave, Near Nehru Place Flyover, GK-1, South Delhi, New Delhi - 110048, India',
     'isoCert' => 'Govt. Registered IP Attorneys & Advocates',
     'totalFiled' => '5,000+',
     'avgRating' => '4.9 / 5',

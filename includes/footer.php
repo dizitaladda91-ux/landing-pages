@@ -7,11 +7,13 @@ if (!isset($siteConfig)) {
   <footer>
     <div class="footer-container">
       <div class="footer-brand">
-        <h3><i class="fas fa-balance-scale"></i> Edwin Corporate Law Firm</h3>
+        <div class="footer-brand-logo">
+          <img src="images/logo_full.png" alt="Edwin Corporate Law Firm Logo" class="footer-logo-img">
+        </div>
         <p>
           India's trusted corporate law firm and intellectual property practice. We specialize in Trademark Registration, Brand Protection, IP Litigation, and Corporate Compliance.
         </p>
-        <p><i class="fas fa-map-marker-alt"></i> Corporate HQ: Barakhamba Road, Connaught Place, New Delhi, India</p>
+        <p><i class="fas fa-map-marker-alt"></i> Corporate HQ: <?php echo htmlspecialchars($siteConfig['address']); ?></p>
       </div>
 
       <div class="footer-column">
