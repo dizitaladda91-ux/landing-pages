@@ -8,7 +8,8 @@ if (!isset($siteConfig)) {
     <div class="footer-container">
       <div class="footer-brand">
         <div class="footer-brand-logo">
-          <img src="images/logo_full.png" alt="Edwin Corporate Law Firm Logo" class="footer-logo-img">
+          <div class="logo-icon" style="width: 42px; height: 42px; flex: 0 0 42px;"><img src="images/logo_icon.png" alt="Edwin Corporate Law Firm logo"></div>
+          <h3 style="margin-bottom:0; color: white;">Edwin Corporate Law Firm</h3>
         </div>
         <p>
           India's trusted corporate law firm and intellectual property practice. We specialize in Trademark Registration, Brand Protection, IP Litigation, and Corporate Compliance.
