@@ -168,22 +168,71 @@
               <input type="text" name="brand_name" class="form-control" placeholder="Your Proposed Brand Name" required>
             </div>
 
-            <div class ="form-group">
-              <select name="services" i,d="services"  class="services-select" required>
-                <option value="" disabled selected>Select Services</option>
-                <option value=""ngo_registration">ngo_registration</option>
-                <option value=""company_registration">company_regitartion</option>
-                <option value=""trademark_registration">trademark_registration</option>
-                <option value=""copyright_registration">copyright_registration</option>
-                <option value=""Design Patent Registration">Design Patent Registration</option>
-                <option value=""Registration Services">Registration Services</option>
-                <option value=""80g/12a Registration">80g/12a Registration</option>
-                <option value=""Firm Registration">Firm Registration</option>
-                <option value=""Darpan Registration">Darpan Registration</option>
-                <option value=""Taxation Services">Taxation Services</option>
-                
-              </select>
-                  </div>
+           <div class="form-group">
+  <label class="form-label">Select Services <span style="color:var(--danger)">*</span></label>
+
+  <div class="custom-select" id="serviceDropdown">
+    <div class="select-box" id="selectBox" tabindex="0">
+      <span id="selectedText">Select Services</span>
+      <span class="arrow"></span>
+    </div>
+    <div class="options-list" id="optionsList">
+      <div class="option-item placeholder" data-value="">Select Services</div>
+      <div class="option-item" data-value="ngo_registration">Ngo Registration</div>
+      <div class="option-item" data-value="company_registration">Company Registration</div>
+      <div class="option-item" data-value="trademark_registration">Trademark Registration</div>
+      <div class="option-item" data-value="copyright_registration">Copyright Registration</div>
+      <div class="option-item" data-value="design_patent_registration">Design Patent Registration</div>
+      <div class="option-item" data-value="registration_services">Registration Services</div>
+      <div class="option-item" data-value="80g_12a_registration">80g/12a Registration</div>
+      <div class="option-item" data-value="firm_registration">Firm Registration</div>
+      <div class="option-item" data-value="darpan_registration">Darpan Registration</div>
+      <div class="option-item" data-value="taxation_services">Taxation Services</div>
+    </div>
+  </div>
+
+  <input type="hidden" name="service" id="serviceInput" required>
+</div>
+
+<script>
+(function () {
+  const dropdown = document.getElementById('serviceDropdown');
+  const selectBox = document.getElementById('selectBox');
+  const selectedText = document.getElementById('selectedText');
+  const serviceInput = document.getElementById('serviceInput');
+  const options = dropdown.querySelectorAll('.option-item:not(.placeholder)');
+
+  selectBox.addEventListener('click', () => {
+    dropdown.classList.toggle('open');
+  });
+
+  selectBox.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      dropdown.classList.toggle('open');
+    }
+  });
+
+  options.forEach(option => {
+    option.addEventListener('click', () => {
+      selectedText.textContent = option.textContent;
+      selectBox.classList.add('has-value');
+      serviceInput.value = option.getAttribute('data-value');
+
+      options.forEach(o => o.classList.remove('selected'));
+      option.classList.add('selected');
+
+      dropdown.classList.remove('open');
+    });
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!dropdown.contains(e.target)) {
+      dropdown.classList.remove('open');
+    }
+  });
+})();
+</script>
 
             <button type="submit" class="submit-btn">
               <i class="fas fa-shield-alt"></i> Apply For Trademark Protection
