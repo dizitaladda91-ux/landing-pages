@@ -184,9 +184,7 @@ require_once __DIR__ . '/includes/header.php';
     <div class="founder-box">
       <div class="founder-card">
         <div class="founder-avatar">
-          <div class="founder-avatar-icon">
-            <i class="fas fa-user-tie"></i>
-          </div>
+          <img src="images/ajay_verma.png" alt="<?php echo htmlspecialchars($founderData['name']); ?> - <?php echo htmlspecialchars($founderData['title']); ?>" class="founder-avatar-img">
           <span class="founder-badge"><?php echo htmlspecialchars($founderData['experience']); ?></span>
         </div>
         

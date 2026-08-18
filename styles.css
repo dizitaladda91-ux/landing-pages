@@ -722,7 +722,7 @@ button {
   box-shadow: var(--shadow-md);
   padding: 40px;
   display: grid;
-  grid-template-columns: 200px 1fr;
+  grid-template-columns: 210px 1fr;
   gap: 35px;
   align-items: center;
   position: relative;
@@ -733,19 +733,16 @@ button {
   text-align: center;
 }
 
-.founder-avatar-icon {
-  width: 130px;
-  height: 130px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 3.2rem;
+.founder-avatar-img {
+  width: 170px;
+  height: 210px;
+  border-radius: 16px;
+  object-fit: cover;
+  object-position: top center;
   margin: 0 auto 14px;
-  box-shadow: 0 8px 20px rgba(30, 58, 138, 0.25);
-  border: 4px solid #eff6ff;
+  box-shadow: 0 8px 24px rgba(30, 58, 138, 0.18);
+  border: 3px solid #eff6ff;
+  display: block;
 }
 
 .founder-badge {
