@@ -133,7 +133,7 @@ button {
 .logo {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   font-family: var(--font-heading);
   font-weight: 800;
   font-size: 1.25rem;
@@ -143,21 +143,8 @@ button {
   text-decoration: none;
 }
 
-.nav-brand-logo-img {
-  height: 52px;
-  width: auto;
-  max-width: 260px;
-  object-fit: contain;
-  display: block;
-  transition: transform 0.2s ease;
-}
-
-.nav-brand-logo-img:hover {
-  transform: scale(1.02);
-}
-
 .logo-icon {
-  height: 40px;
+  height: 44px;
   width: auto;
   display: flex;
   align-items: center;
@@ -166,15 +153,6 @@ button {
 }
 
 .logo-icon img {
-  height: 40px;
-  width: auto;
-  max-height: 40px;
-  object-fit: contain;
-  display: block !important;
-  position: static !important;
-}
-
-.footer-logo-icon {
   height: 44px;
   width: auto;
   max-height: 44px;
@@ -1345,18 +1323,16 @@ footer {
 .footer-brand-logo {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 14px;
   margin-bottom: 16px;
 }
 
-.footer-logo-img {
-  height: 52px;
+.footer-logo-icon {
+  height: 48px;
   width: auto;
+  max-height: 48px;
   object-fit: contain;
-  background: #ffffff;
-  padding: 6px 14px;
-  border-radius: var(--radius-sm);
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+  display: block;
 }
 
 .footer-brand p {
