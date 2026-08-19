@@ -8,7 +8,7 @@ if (!isset($siteConfig)) {
     <div class="footer-container">
       <div class="footer-brand">
         <div class="footer-brand-logo">
-          <img src="images/logo_icon_white.png" alt="Edwin Corporate Law Firm logo" class="footer-logo-icon">
+          <img src="images/logo_full_white.png" alt="Edwin Corporate Law Firm logo" class="footer-logo-icon">
           <h3 style="margin-bottom:0; color: white;">Edwin Corporate Law Firm</h3>
         </div>
         <p>
