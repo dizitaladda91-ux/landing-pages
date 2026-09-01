@@ -31,11 +31,11 @@ if (!isset($siteConfig)) {
       <div class="footer-column">
         <h4>Other Services</h4>
         <ul>
-          <li><a href="#">Copyright Registration</a></li>
-          <li><a href="#">Patent Filing India</a></li>
-          <li><a href="#">Pvt Ltd Registration</a></li>
-          <li><a href="#">LLP Incorporation</a></li>
-          <li><a href="#">MSME Udyam Registration</a></li>
+          <li><a href="#search">Trademark Monitoring</a></li>
+          <li><a href="#search">Trademark Opposition</a></li>
+          <li><a href="#search">Brand Protection</a></li>
+          <li><a href="#search">IP Consultation</a></li>
+          <li><a href="#search">Legal Support</a></li>
         </ul>
       </div>
 

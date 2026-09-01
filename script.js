@@ -226,12 +226,11 @@ function initLeadForms() {
       submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Saving Lead & Sending Email...';
       submitBtn.disabled = true;
 
-      // POST to backend PHP API which will save to database AND send email
-      fetch('api/submit-lead.php', {
+      // POST to Google Apps Script which will save to Google Sheet AND send email
+      const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzzKXNgNY1DqfW057_21beHayEnyVboHEz8KDJqEY5Y3a-A31GvtMRBQGVCSS-t0iI1/exec';
+      
+      fetch(GOOGLE_SCRIPT_URL, {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
         body: JSON.stringify(leadData)
       })
       .then(response => response.json())
@@ -240,20 +239,17 @@ function initLeadForms() {
         submitBtn.disabled = false;
         
         if (data.success) {
-          console.log('✅ Lead Saved & Email Sent!', data);
           form.reset();
           if (modalBackdrop) modalBackdrop.classList.remove('active');
-          showToast('✅ Lead submitted! Email sent to ' + ADMIN_EMAIL);
+          showToast('✅ Lead submitted! Data saved to Google Sheet. Email sent to enquiry@edwincorporatelawfirm.com');
         } else {
-          console.error('❌ Lead submission error:', data.message);
-          showToast('⚠️ ' + data.message);
+          showToast('⚠️ Error: ' + data.message);
         }
       })
       .catch(err => {
-        console.error('❌ Network error:', err);
         submitBtn.innerHTML = originalText;
         submitBtn.disabled = false;
-        showToast('❌ Error: Could not submit lead. Check internet connection.');
+        showToast('❌ Error submitting lead. Please try again.');
       });
     });
   });

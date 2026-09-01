@@ -42,7 +42,6 @@ if (!isset($siteConfig)) {
       <div class="top-links">
         <a href="#pricing"><i class="fas fa-tags"></i> View Govt Fees</a>
         <a href="#faqs"><i class="fas fa-question-circle"></i> TM Help</a>
-        <a href="#" onclick="openLeadModal()"><i class="fas fa-user-lock"></i> Client Login</a>
       </div>
     </div>
   </div>
