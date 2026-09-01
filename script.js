@@ -241,7 +241,7 @@ function initLeadForms() {
         if (data.success) {
           form.reset();
           if (modalBackdrop) modalBackdrop.classList.remove('active');
-          showToast('✅ Lead submitted! Data saved to Google Sheet. Email sent to enquiry@edwincorporatelawfirm.com');
+          showToast('✅ Your application submitted successfully!\n\n✓ Lead saved to our database\n✓ Confirmation email sent to admin\n\nOur team will contact you within 15 minutes.');
         } else {
           showToast('⚠️ Error: ' + data.message);
         }
