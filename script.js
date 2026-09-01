@@ -1,18 +1,5 @@
 // Interactive Frontend Logic for Edwin Corporate Law Firm Trademark Consultancy Platform
 
-// Load EmailJS library
-const script = document.createElement('script');
-script.src = 'https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/index.min.js';
-script.onload = () => {
-  emailjs.init('P_fvTl3uDtw21Kati');
-};
-document.head.appendChild(script);
-
-// EmailJS Configuration
-const EMAILJS_SERVICE_ID = 'service_hede6ii';
-const EMAILJS_TEMPLATE_ID = 'template_h6r3puw';
-const ADMIN_EMAIL = 'satyammishra07july@gmail.com';
-
 document.addEventListener('DOMContentLoaded', () => {
   initTrademarkSearch();
   initClassExplorer();
@@ -229,76 +216,45 @@ function initLeadForms() {
 
       const formData = new FormData(form);
       const leadData = {
-        lead_id: 'TM-LEAD-' + Math.random().toString(36).substr(2, 8).toUpperCase(),
         full_name: formData.get('full_name'),
         phone: formData.get('phone'),
         email: formData.get('email'),
         brand_name: formData.get('brand_name'),
-        service: formData.get('service'),
-        created_at: new Date().toLocaleString(),
-        ip_address: 'browser-local'
+        service: formData.get('service')
       };
 
-      submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending Lead & Email...';
+      submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Saving Lead & Sending Email...';
       submitBtn.disabled = true;
 
-      // Wait for EmailJS to load
-      if (typeof emailjs !== 'undefined') {
-        // Send email via EmailJS
-        emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
-          full_name: leadData.full_name,
-          phone: leadData.phone,
-          email: leadData.email,
-          brand_name: leadData.brand_name,
-          service: leadData.service,
-          created_at: leadData.created_at,
-          to_email: ADMIN_EMAIL
-        }).then(() => {
-          // Email sent successfully - save to localStorage
-          let allLeads = JSON.parse(localStorage.getItem('leads') || '[]');
-          allLeads.push(leadData);
-          localStorage.setItem('leads', JSON.stringify(allLeads));
-
-          console.log('✅ Lead Saved + Email Sent!', leadData);
-          console.log('📊 All Leads:', allLeads);
-
-          submitBtn.innerHTML = originalText;
-          submitBtn.disabled = false;
-          
+      // POST to backend PHP API which will save to database AND send email
+      fetch('api/submit-lead.php', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(leadData)
+      })
+      .then(response => response.json())
+      .then(data => {
+        submitBtn.innerHTML = originalText;
+        submitBtn.disabled = false;
+        
+        if (data.success) {
+          console.log('✅ Lead Saved & Email Sent!', data);
           form.reset();
           if (modalBackdrop) modalBackdrop.classList.remove('active');
-          showToast('✅ Lead submitted! Email sent to admin. Check inbox!');
-        }).catch((err) => {
-          console.error('EmailJS Error:', err);
-          // Save to localStorage even if email fails
-          let allLeads = JSON.parse(localStorage.getItem('leads') || '[]');
-          allLeads.push(leadData);
-          localStorage.setItem('leads', JSON.stringify(allLeads));
-
-          submitBtn.innerHTML = originalText;
-          submitBtn.disabled = false;
-          
-          form.reset();
-          if (modalBackdrop) modalBackdrop.classList.remove('active');
-          showToast('✅ Lead saved locally. (Email: Check admin inbox)');
-        });
-      } else {
-        // EmailJS not loaded - save to localStorage only
-        setTimeout(() => {
-          let allLeads = JSON.parse(localStorage.getItem('leads') || '[]');
-          allLeads.push(leadData);
-          localStorage.setItem('leads', JSON.stringify(allLeads));
-
-          console.log('✅ Lead Saved (EmailJS pending)!', leadData);
-
-          submitBtn.innerHTML = originalText;
-          submitBtn.disabled = false;
-          
-          form.reset();
-          if (modalBackdrop) modalBackdrop.classList.remove('active');
-          showToast('✅ Lead saved! Email notification sending...');
-        }, 1500);
-      }
+          showToast('✅ Lead submitted! Email sent to ' + ADMIN_EMAIL);
+        } else {
+          console.error('❌ Lead submission error:', data.message);
+          showToast('⚠️ ' + data.message);
+        }
+      })
+      .catch(err => {
+        console.error('❌ Network error:', err);
+        submitBtn.innerHTML = originalText;
+        submitBtn.disabled = false;
+        showToast('❌ Error: Could not submit lead. Check internet connection.');
+      });
     });
   });
 }
