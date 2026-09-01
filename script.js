@@ -215,32 +215,37 @@ function initLeadForms() {
       const originalText = submitBtn.innerHTML;
 
       const formData = new FormData(form);
+      const leadData = {
+        lead_id: 'TM-LEAD-' + Math.random().toString(36).substr(2, 8).toUpperCase(),
+        full_name: formData.get('full_name'),
+        phone: formData.get('phone'),
+        email: formData.get('email'),
+        brand_name: formData.get('brand_name'),
+        service: formData.get('service'),
+        created_at: new Date().toLocaleString(),
+        ip_address: 'browser-local'
+      };
 
-      submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Submitting to PHP Server...';
+      submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Saving Data...';
       submitBtn.disabled = true;
 
-      fetch('api/submit-lead.php', {
-        method: 'POST',
-        body: formData
-      })
-      .then(res => res.json())
-      .then(data => {
+      // Save to localStorage
+      setTimeout(() => {
+        let allLeads = JSON.parse(localStorage.getItem('leads') || '[]');
+        allLeads.push(leadData);
+        localStorage.setItem('leads', JSON.stringify(allLeads));
+
+        // Log to console
+        console.log('✅ Lead Saved Successfully!', leadData);
+        console.log('📊 All Leads:', allLeads);
+
         submitBtn.innerHTML = originalText;
         submitBtn.disabled = false;
         
-        if (data.success) {
-          form.reset();
-          if (modalBackdrop) modalBackdrop.classList.remove('active');
-          showToast(data.message);
-        } else {
-          alert(data.message || 'Submission failed.');
-        }
-      })
-      .catch(err => {
-        submitBtn.innerHTML = originalText;
-        submitBtn.disabled = false;
-        alert('Server communication error.');
-      });
+        form.reset();
+        if (modalBackdrop) modalBackdrop.classList.remove('active');
+        showToast('✅ Lead saved successfully! Check Console (F12) for details.');
+      }, 1000);
     });
   });
 }
