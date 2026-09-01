@@ -169,7 +169,7 @@ require_once __DIR__ . '/includes/header.php';
             </script>
 
             <button type="submit" class="submit-btn">
-              <i class="fas fa-shield-alt"></i> Apply For Trademark Protection
+              <i class="fas fa-shield-alt"></i> Apply 
             </button>
 
             <div class="form-trust-text">

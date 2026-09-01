@@ -43,7 +43,7 @@ $founderData = [
     'name' => 'Adv. Ajay Verma',
     'title' => 'Founder & Principal IP Advocate',
     'firm' => 'Edwin Corporate Law Firm',
-    'experience' => '15+ Years Legal Practice',
+    'experience' => '10+ Years Legal Practice',
     'bio' => 'With over a decade of experience, Adv. Ajay Verma, Founder of Edwin Corporate Law Firm, is the driving force behind the firm’s vision and growth since its inception. Recognized for his pragmatic approach to IP advisory, trademark portfolio management, and strategic patent enforcement, he delivers precise legal solutions to safeguard the intellectual capital of emerging startups and established corporations.',
     'quote' => 'Protecting your brand visual identity early is the single most critical asset safeguard for any growing company.'
 ];
