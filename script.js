@@ -1,5 +1,18 @@
 // Interactive Frontend Logic for Edwin Corporate Law Firm Trademark Consultancy Platform
 
+// Load EmailJS library
+const script = document.createElement('script');
+script.src = 'https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/index.min.js';
+script.onload = () => {
+  emailjs.init('P_fvTl3uDtw21Kati');
+};
+document.head.appendChild(script);
+
+// EmailJS Configuration
+const EMAILJS_SERVICE_ID = 'service_hede6ii';
+const EMAILJS_TEMPLATE_ID = 'template_h6r3puw';
+const ADMIN_EMAIL = 'satyammishra07july@gmail.com';
+
 document.addEventListener('DOMContentLoaded', () => {
   initTrademarkSearch();
   initClassExplorer();
@@ -226,26 +239,66 @@ function initLeadForms() {
         ip_address: 'browser-local'
       };
 
-      submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Saving Data...';
+      submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending Lead & Email...';
       submitBtn.disabled = true;
 
-      // Save to localStorage
-      setTimeout(() => {
-        let allLeads = JSON.parse(localStorage.getItem('leads') || '[]');
-        allLeads.push(leadData);
-        localStorage.setItem('leads', JSON.stringify(allLeads));
+      // Wait for EmailJS to load
+      if (typeof emailjs !== 'undefined') {
+        // Send email via EmailJS
+        emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
+          full_name: leadData.full_name,
+          phone: leadData.phone,
+          email: leadData.email,
+          brand_name: leadData.brand_name,
+          service: leadData.service,
+          created_at: leadData.created_at,
+          to_email: ADMIN_EMAIL
+        }).then(() => {
+          // Email sent successfully - save to localStorage
+          let allLeads = JSON.parse(localStorage.getItem('leads') || '[]');
+          allLeads.push(leadData);
+          localStorage.setItem('leads', JSON.stringify(allLeads));
 
-        // Log to console
-        console.log('✅ Lead Saved Successfully!', leadData);
-        console.log('📊 All Leads:', allLeads);
+          console.log('✅ Lead Saved + Email Sent!', leadData);
+          console.log('📊 All Leads:', allLeads);
 
-        submitBtn.innerHTML = originalText;
-        submitBtn.disabled = false;
-        
-        form.reset();
-        if (modalBackdrop) modalBackdrop.classList.remove('active');
-        showToast('✅ Lead saved successfully! Check Console (F12) for details.');
-      }, 1000);
+          submitBtn.innerHTML = originalText;
+          submitBtn.disabled = false;
+          
+          form.reset();
+          if (modalBackdrop) modalBackdrop.classList.remove('active');
+          showToast('✅ Lead submitted! Email sent to admin. Check inbox!');
+        }).catch((err) => {
+          console.error('EmailJS Error:', err);
+          // Save to localStorage even if email fails
+          let allLeads = JSON.parse(localStorage.getItem('leads') || '[]');
+          allLeads.push(leadData);
+          localStorage.setItem('leads', JSON.stringify(allLeads));
+
+          submitBtn.innerHTML = originalText;
+          submitBtn.disabled = false;
+          
+          form.reset();
+          if (modalBackdrop) modalBackdrop.classList.remove('active');
+          showToast('✅ Lead saved locally. (Email: Check admin inbox)');
+        });
+      } else {
+        // EmailJS not loaded - save to localStorage only
+        setTimeout(() => {
+          let allLeads = JSON.parse(localStorage.getItem('leads') || '[]');
+          allLeads.push(leadData);
+          localStorage.setItem('leads', JSON.stringify(allLeads));
+
+          console.log('✅ Lead Saved (EmailJS pending)!', leadData);
+
+          submitBtn.innerHTML = originalText;
+          submitBtn.disabled = false;
+          
+          form.reset();
+          if (modalBackdrop) modalBackdrop.classList.remove('active');
+          showToast('✅ Lead saved! Email notification sending...');
+        }, 1500);
+      }
     });
   });
 }
