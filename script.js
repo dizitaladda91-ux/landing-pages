@@ -227,7 +227,7 @@ function initLeadForms() {
       submitBtn.disabled = true;
 
       // POST to Google Apps Script which will save to Google Sheet AND send email
-      const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzzKXNgNY1DqfW057_21beHayEnyVboHEz8KDJqEY5Y3a-A31GvtMRBQGVCSS-t0iI1/exec';
+      const GOOGLE_SCRIPT_URL ='https://script.google.com/macros/s/AKfycbygeijIgNdJxVfkOBOTzfmKTpr8K6Vu3dGnGWeb9afeqQ30vYUjWV95G1LbizWsZAg5/exec';
       
       fetch(GOOGLE_SCRIPT_URL, {
         method: 'POST',
